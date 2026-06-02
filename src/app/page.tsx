@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Link from 'next/link'
 import { FileText, MessageCircle, Upload, Shield, Zap, Globe } from 'lucide-react'
 
 export default function HomePage() {
@@ -21,12 +22,18 @@ export default function HomePage() {
               and get plain-language explanations, insights, and answers to your questions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors shadow-lg">
+              <Link
+                href="/upload"
+                className="bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors shadow-lg text-center"
+              >
                 Start Analyzing Records
-              </button>
-              <button className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
-                View Demo
-              </button>
+              </Link>
+              <Link
+                href="/about"
+                className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors text-center"
+              >
+                Learn More
+              </Link>
             </div>
           </div>
         </div>
@@ -174,9 +181,12 @@ export default function HomePage() {
           <p className="text-xl text-primary-100 mb-8">
             Upload your health records and start getting AI-powered insights today.
           </p>
-          <button className="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg">
+          <Link
+            href="/upload"
+            className="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg text-center inline-block"
+          >
             Get Started Now
-          </button>
+          </Link>
 
           <div className="mt-8 text-primary-200 text-sm">
             <p>

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Link from 'next/link'
 import '@/styles/globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -37,16 +38,17 @@ export default function RootLayout({
           <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-health-border">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex justify-between items-center h-16">
-                <div className="flex items-center space-x-2">
+                <Link href="/" className="flex items-center space-x-2">
                   <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center">
                     <span className="text-white font-bold text-sm">C</span>
                   </div>
                   <span className="font-bold text-xl text-health-text">CareGPT</span>
-                </div>
+                </Link>
                 <nav className="hidden md:flex items-center space-x-8">
-                  <a href="/" className="text-health-muted hover:text-health-text transition-colors">Dashboard</a>
-                  <a href="/upload" className="text-health-muted hover:text-health-text transition-colors">Upload</a>
-                  <a href="/chat" className="text-health-muted hover:text-health-text transition-colors">Chat</a>
+                  <Link href="/dashboard" className="text-health-muted hover:text-health-text transition-colors">Dashboard</Link>
+                  <Link href="/upload" className="text-health-muted hover:text-health-text transition-colors">Upload</Link>
+                  <Link href="/chat" className="text-health-muted hover:text-health-text transition-colors">Chat</Link>
+                  <Link href="/about" className="text-health-muted hover:text-health-text transition-colors">About</Link>
                 </nav>
               </div>
             </div>
