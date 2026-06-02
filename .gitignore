@@ -93,4 +93,4 @@ test-fhir/
 # Backup files
 *.bak
 *.backup
-*.old
+*.oldtemp/
